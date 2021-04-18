@@ -1,0 +1,10 @@
+	for k in *.pdf; do
+	
+	echo $k
+	
+	filename=$k
+	y=$(echo $filename | cut -f 1 -d '.')
+	convert -verbose -density 150 -trim $k -quality 100 -flatten -sharpen 0x1.0 $y.jpg
+	
+	done
+
