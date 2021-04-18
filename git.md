@@ -5,6 +5,7 @@
 git reset --hard origin/master
 test/test2/test3
 
+testing
 
 # add single file
 git add CHC.tex include
