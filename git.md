@@ -3,6 +3,7 @@
 ### fetch/overwrite
 `git fetch --all`
 git reset --hard origin/master
+test
 
 
 # add single file
