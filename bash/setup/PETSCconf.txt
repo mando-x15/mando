@@ -1,0 +1,21 @@
+
+#Hari--with mumps and cxx
+./configure PETSC_ARCH=linux-gnu-opt --with-debugging=0 --with-cc=gcc --download-scalapack=1 --with-cxx=g++ --download-mumps=1 --download-mpich=1 --download-parmetis=1 --with-scalar-type=real --download-f-blas-lapack=1 --with-clanguage=cxx --download-blacs=1 --with-fc=gfortran
+
+
+#Olga
+./configure --download-f-blas-lapack=1 --download-metis=1 --download-parmetis=1 --download-mpich=1 PETSC_ARCH=linux-gnu-opt --with-debugging=0 --with-clanguage=cxx --with-x=0 
+
+
+#Yu Xie
+
+--download-scalapack=1 --download-mumps=1 --download-superlu_dist=1 --download-hypre=1 --with-mpi-dir=--with-mpi-dir=/opt/apps/intel13/mvapich2/1.9 --with-debugging=1 --download-parmetis=1 --download-f-blas-lapack=1 --with-clanguage=cxx --download-blacs=1 --with-c2html=0
+
+
+#sp
+./configure --with-debugging=1 --with-cc=gcc --download-scalapack=1 --with-cxx=g++ --download-mpich=1 --download-parmetis=1 --with-scalar-type=real --download-f-blas-lapack=1 --with-clanguage=cxx --download-blacs=1 --with-fc=gfortran
+
+
+#w/ debug + mumps
+./configure PETSC_ARCH=linux-gnu-opt --with-debugging=1 --with-cc=gcc --download-scalapack=1 --with-cxx=g++ --download-mpich=1 --download-parmetis=1 --with-scalar-type=real --download-f-blas-lapack=1 --with-clanguage=cxx --download-blacs=1 --with-fc=gfortran --download-mumps=1 --download-metis=1
+

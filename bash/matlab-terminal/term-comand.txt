@@ -1,0 +1,23 @@
+nohup matlab -nodesktop -nosplash -r maxE /dev/null 2> output.txt
+
+% nohup is used to keep matlab from messing up the terminal/stream
+
+
+
+%%example code:
+
+clear all;
+close all;
+
+
+energy = importdata('energy.txt');
+int = energy(:,4);
+[C,I] = max(int);
+
+fprintf('%f\n',C)
+fprintf('%i\n',I)
+
+%be sure to output exactly to a specific file -- not to the screen as shown above -- will show the matlab copyright/logo
+
+quit  %need to have both quit and exit in script
+exit

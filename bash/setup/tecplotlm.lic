@@ -1,0 +1,37 @@
+#              #############################
+#              #                           #
+#              #    License Manager File   #
+#              #                           #
+#              #############################
+#
+#
+# This file links your installation of Tecplot with Tecplot's
+# license manager.  The contents of this file are dependent 
+# upon the type of license that you own.  
+#
+#
+#
+# To set up a network license (most common):
+#
+#  (1)  Add the following line to the file (without the 
+#       "#" characters):
+#
+#
+#          HOST myserver 0 27100
+#
+#
+#  (2)  Replace "myserver" with the name of server upon
+#       which your license manager is installed.
+#
+#
+#
+#
+# To set up a single-user license:
+#
+#   (1) If you have not already done so, you will need to obtain an 
+#       activation key. Go to http://www.tecplot.com/activate and follow 
+#       the instructions to request an activation key for your product.
+#
+#   (2) Once you have received your license key, enter it in this file.
+
+HOST engr-license-linux.engineering.iastate.edu 0 27100

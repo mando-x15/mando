@@ -1,0 +1,127 @@
+TACC: Starting up job 1107926
+TACC: Setting up parallel environment for MVAPICH2+mpispawn.
+TACC: Starting parallel tasks...
+[STAT] nsd: 2
+[STAT] ifBoxGrid: 1
+[STAT] arrays created!
+[STAT] orderOfBF: 1
+[STAT] ifDD: 1
+[STAT] typeOfIC: 0
+[STAT] Lx: 7
+[STAT] Nelemx: 1570
+[STAT] Ly: 0.3
+[STAT] Nelemy: 65
+[STAT] inputFilenameGridField: dataCH.0024.plt
+[STAT] varListOutput: [phi]
+[STAT] meanPhi: 0.5
+[STAT] varPhi: 0.05
+[STAT] D: 1
+[STAT] epsilon2: 2.19e-05
+[STAT] ifDconst: 0
+[STAT] ifRandSeed: 0
+[STAT] ifpBC: 2
+[STAT] dt: 1e-05
+[STAT] totalT: 5
+[STAT] timeScheme: 1
+[STAT] typeOfAdapt: 0
+[STAT] adptTol: 0.01
+[STAT] restartFromT: 0.5501
+[STAT] restartWritingFromI: 24
+[STAT]  dtRestartFrom: 5e-05
+[STAT] typeOfFreeEnergy: 4
+[STAT] m1: 1000
+[STAT] m2: 1000
+[STAT] chi12: 0.04
+[STAT] outputingStrategy: 1
+[STAT] ifSubstratePatterning: 1
+[STAT] typeOfSubstratePatterning: 0
+[STAT] h1: 2e-06
+[STAT] g: 0
+[STAT] file with substrate patterning read! 
+
+Partition a 2D box to 32 sub-domains.
+
+Initialize 2D box OK!
+Box size: 7.000000 x 0.300000
+Number of elements: 1570 x 65 = 102050
+Number of nodes: 103686
+
+Completed Dual Graph -- Nvtxs: 102050, Nedges: 404930 
+[102050   404930  3189  3190] [800] [ 0.000] [ 0.000]
+[ 54162   260972  1666  1707] [800] [ 0.000] [ 0.000]
+[ 29650   152952   911   944] [800] [ 0.000] [ 0.000]
+[ 16320    88852   499   521] [800] [ 0.000] [ 0.000]
+[  9103    51288   277   292] [800] [ 0.000] [ 0.000]
+[  5202    29572   156   171] [800] [ 0.000] [ 0.000]
+[  2978    16832    88   100] [800] [ 0.000] [ 0.001]
+[  1742     9710    50    59] [800] [ 0.000] [ 0.001]
+[  1085     5912    29    38] [800] [ 0.000] [ 0.002]
+[   964     5222    28    35] [800] [ 0.000] [ 0.002]
+nvtxs:        964, balance: 1.032 
+nvtxs:       1085, cut:     3880, balance: 1.066 
+nvtxs:       1742, cut:     3785, balance: 1.055 
+nvtxs:       2978, cut:     3660, balance: 1.049 
+nvtxs:       5202, cut:     3534, balance: 1.048 
+nvtxs:       9103, cut:     3420, balance: 1.041 
+nvtxs:      16320, cut:     3332, balance: 1.040 
+nvtxs:      29650, cut:     3262, balance: 1.033 
+nvtxs:      54162, cut:     3205, balance: 1.031 
+nvtxs:     102050, cut:     3173, balance: 1.030 
+      Setup: Max:   0.004, Sum:   0.093, Balance:   1.254
+   Matching: Max:   0.009, Sum:   0.298, Balance:   1.001
+Contraction: Max:   0.003, Sum:   0.084, Balance:   1.007
+   InitPart: Max:   0.012, Sum:   0.383, Balance:   1.000
+    Project: Max:   0.001, Sum:   0.005, Balance:   4.679
+ Initialize: Max:   0.001, Sum:   0.024, Balance:   1.407
+      K-way: Max:   0.005, Sum:   0.148, Balance:   1.035
+      Remap: Max:   0.000, Sum:   0.003, Balance:   1.031
+      Total: Max:   0.046, Sum:   1.468, Balance:   1.000
+Final 32-way CUT:   3173 	Balance: 1.030   avg: 1.030
+   Mesh2Dual: Max:   0.010, Sum:   0.287, Balance:   1.156
+    ParMETIS: Max:   0.049, Sum:   1.579, Balance:   1.000
+       Total: Max:   0.060, Sum:   1.866, Balance:   1.024
+Partition OK!
+
+Moving elements OK!
+
+Moving nodes OK!
+
+Mapping to local IDs OK!
+
+Finding sharing nodes OK!
+
+Transfer data to GRID object OK!
+
+Free memory OK!
+
+[STAT] Grid generated, Domain Decomposition requested
+buf: VARIABLES = "x"  "y"          "phi" 
+[STAT] problem initialized!
+[STAT] init gridField written!
+[STAT] first time step solved! 
+[STAT] Boundaries stabilized! 
+[STAT] Boundaries created! 
+[STAT] gridField corresponding to bndrCreated.plt written!
+[STAT] write 25-time step written!  to file dataCH.0025.pltfor 1630-timestep -> t:0.63165
+[STAT] write 26-time step written!  to file dataCH.0026.pltfor 3484-timestep -> t:0.72435
+[STAT] write 27-time step written!  to file dataCH.0027.pltfor 5576-timestep -> t:0.82895
+[STAT] write 28-time step written!  to file dataCH.0028.pltfor 7892-timestep -> t:0.94475
+[STAT] write 29-time step written!  to file dataCH.0029.pltfor 10390-timestep -> t:1.06965
+[STAT] write 30-time step written!  to file dataCH.0030.pltfor 13040-timestep -> t:1.20215
+[STAT] write 31-time step written!  to file dataCH.0031.pltfor 15690-timestep -> t:1.33465
+[STAT] write 32-time step written!  to file dataCH.0032.pltfor 18340-timestep -> t:1.46715
+[STAT] write 33-time step written!  to file dataCH.0033.pltfor 20990-timestep -> t:1.59965
+[STAT] write 34-time step written!  to file dataCH.0034.pltfor 23640-timestep -> t:1.73215
+[STAT] write 35-time step written!  to file dataCH.0035.pltfor 26290-timestep -> t:1.86465
+[STAT] write 36-time step written!  to file dataCH.0036.pltfor 28940-timestep -> t:1.99715
+[STAT] write 37-time step written!  to file dataCH.0037.pltfor 31590-timestep -> t:2.12965
+[STAT] write 38-time step written!  to file dataCH.0038.pltfor 34240-timestep -> t:2.26215
+[STAT] write 39-time step written!  to file dataCH.0039.pltfor 36890-timestep -> t:2.39465
+[STAT] write 40-time step written!  to file dataCH.0040.pltfor 44840-timestep -> t:2.79215
+[STAT] write 41-time step written!  to file dataCH.0041.pltfor 47491-timestep -> t:2.9247
+[STAT] write 42-time step written!  to file dataCH.0042.pltfor 52791-timestep -> t:3.1897
+[STAT] write 43-time step written!  to file dataCH.0043.pltfor 58091-timestep -> t:3.4547
+[STAT] write 44-time step written!  to file dataCH.0044.pltfor 63391-timestep -> t:3.7197
+[STAT] write 45-time step written!  to file dataCH.0045.pltfor 68691-timestep -> t:3.9847
+slurmd[c413-901]: *** JOB 1107926 CANCELLED AT 2013-07-09T15:42:10 DUE TO TIME LIMIT ***
+[c413-901.stampede.tacc.utexas.edu:mpirun_rsh][signal_processor] Caught signal 15, killing job

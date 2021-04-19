@@ -1,0 +1,57 @@
+#!/bin/bash
+
+RUNTECPLOT=/home/spfeife/PACKAGES/tecplot/bin/tec360
+
+# list of variable for tecplot-macro
+varnamel=" '\"x\" \"y\" \"phi\"  '" 
+
+
+echo "1: $1 "
+
+FILENAME=$1
+
+
+function make_mcr {
+echo "#!MC 1200" > temp.mcr
+echo "# Created by Tecplot 360 build 12.2.0.9077" >> temp.mcr
+echo "\$!READDATASET  '$FILENAME' " >> temp.mcr
+echo "  READDATAOPTION = NEW" >> temp.mcr
+echo "  RESETSTYLE = YES" >> temp.mcr
+echo "  INCLUDETEXT = NO" >> temp.mcr
+echo "  INCLUDEGEOM = NO" >> temp.mcr
+echo "  INCLUDECUSTOMLABELS = NO" >> temp.mcr
+echo "  VARLOADMODE = BYNAME" >> temp.mcr
+echo "  ASSIGNSTRANDIDS = YES" >> temp.mcr
+echo "  INITIALPLOTTYPE = CARTESIAN2D" >> temp.mcr
+echo "  VARNAMELIST = $varnamel" >> temp.mcr
+echo "\$!GLOBALCONTOUR 1  VAR = 3" >> temp.mcr
+echo "\$!CONTOURLEVELS RESETTONICE" >> temp.mcr
+echo "  CONTOURGROUP = 1" >> temp.mcr
+echo "  APPROXNUMVALUES = 15" >> temp.mcr
+echo "\$!FIELDLAYERS SHOWCONTOUR = YES" >> temp.mcr
+echo "\$!REDRAWALL " >> temp.mcr
+echo "\$!TWODAXIS XDETAIL{SHOWAXIS = NO}" >> temp.mcr
+echo "\$!TWODAXIS YDETAIL{SHOWAXIS = NO}" >> temp.mcr
+echo "\$!GLOBALCONTOUR 1  LEGEND{SHOW = NO}" >> temp.mcr
+echo "\$!GLOBALCONTOUR 1  COLORMAPFILTER{COLORMAPDISTRIBUTION = CONTINUOUS}" >> temp.mcr
+echo "\$!EXPORTSETUP EXPORTFORMAT = JPEG" >> temp.mcr
+echo "\$!EXPORTSETUP IMAGEWIDTH = 817" >> temp.mcr
+echo "\$!EXPORTSETUP  QUALITY = 100" >> temp.mcr
+echo "\$!EXPORTSETUP EXPORTFNAME = '$FILENAME.jpg'" >> temp.mcr
+echo "\$!EXPORT " >> temp.mcr
+echo "  EXPORTREGION = CURRENTFRAME" >> temp.mcr
+echo "\$!QUIT" >> temp.mcr
+}
+
+# execute tecplot only if jpg-file does not exist
+if [ ! -e $FILENAME.jpg ]; then  
+
+	make_mcr $FILENAME
+	$RUNTECPLOT -b temp.mcr
+	convert -crop 613x60+106+585 $FILENAME.jpg crop_$FILENAME.jpg
+	rm -f temp.*
+	rm batch.log
+	rm $FILENAME.jpg
+
+fi 
+

@@ -1,0 +1,70 @@
+
+qmgr -c "p s"
+
+qmgr -c "delete queue myclusterqueue"
+
+
+create queue long
+set queue long queue_type = Execution
+set queue long Priority = 60
+set queue long max_running = 1
+set queue long resources_max.cput = 168:00:00
+set queue long resources_min.cput = 02:00:00
+set queue long resources_default.cput = 12:00:00
+set queue long enabled = True
+set queue long started = True
+
+create queue medium
+set queue medium queue_type = Execution
+set queue medium Priority = 80
+set queue medium max_running = 2
+set queue medium resources_max.cput = 48:00:00
+set queue medium resources_min.cput = 02:00:00
+set queue medium resources_default.cput = 02:00:00
+set queue medium enabled = True
+set queue medium started = True
+
+create queue short
+set queue short queue_type = Execution
+set queue short Priority = 5
+set queue short max_running = 2
+set queue short resources_max.cput = 04:00:00
+set queue short resources_min.cput = 00:30:00
+set queue short resources_default.cput = 00:30:00
+set queue short enabled = True
+set queue short started = True
+
+create queue small
+set queue small queue_type = Execution
+set queue small Priority = 10
+set queue small max_running = 4
+set queue small resources_max.cput = 04:00:00
+set queue small resources_min.cput = 00:30:00
+set queue small resources_default.cput = 00:30:00
+set queue small enabled = True
+set queue small started = True
+
+create queue debug
+set queue debug queue_type = Execution
+set queue debug Priority = 1
+set queue debug max_running = 4
+set queue debug resources_max.cput = 02:00:00
+set queue debug resources_min.cput = 00:30:00
+set queue debug resources_default.cput = 00:30:00
+set queue debug enabled = True
+set queue debug started = True
+
+create queue default
+set queue default queue_type = Route
+set queue default max_running = 10
+set queue default route_destinations = short
+set queue default route_destinations += small
+set queue default route_destinations += medium
+set queue default route_destinations += long
+set queue default enabled = True
+set queue default started = True
+
+
+
+
+

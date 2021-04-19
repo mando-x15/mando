@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#printf "%12.4s %1.2f\n" John 2 Jackson 4.579 Walter 2.9
+
+date=$( date )
+
+echo "$date"
+
