@@ -3,7 +3,7 @@
 CDMAIN=$PWD
 
 #python location
-py='/home/spfeife/Python/mergeEnergy'
+py='/home'
 
 
 NofTests=( 16 )

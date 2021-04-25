@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1372531480 source:/home/spfeife/Desktop/getPS/PS/getPS.cpp
-	<iostream>
-	<fstream>
-	<algorithm>
-

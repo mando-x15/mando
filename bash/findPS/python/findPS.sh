@@ -3,7 +3,7 @@
 CDMAIN=$PWD
 
 #python location
-py='/home/spfeife/Bash/findPS'
+py=''
 
 	# delete any previous files
 	if [ -e timeOfPS-tot.txt ]; then

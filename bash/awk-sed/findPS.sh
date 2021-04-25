@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CDMAIN=$PWD
-EXECPS=/home/spfeife/Bash/findPS/findPS
+EXECPS=/home/
 
 #filename
 NAM="energy.txt"

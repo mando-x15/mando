@@ -2,7 +2,7 @@
 shopt -s extglob
 
 CDMAIN=$PWD
-TARGET="/home/spfeife/PROJECTS/MESC/CHeq/TESTS/Substrate/GraSPI"
+TARGET="/"
 
 echo ""
 for n in pn*; do

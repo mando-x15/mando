@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UTIL='/media/spfeife/ext4/PhaFiC/1Dmap/util'
+UTIL='/media/'
 
 # zip all data
 for j in ke*; do

@@ -7,13 +7,13 @@
 #       This script loops over ke* and then loops over lp_*
 #
 ##
-# Written By: Balaji Pokuri & Spencer Pfeifer
+# Written By:
 # Date: 10/25/17
 #
 ##############################################################
 
 # Set paths
-SRC=/media/spfeife/ext4/LOCAL/graspi
+SRC=/media/
 GRASPI=$SRC/all_process.sh
 BLUE='\033[0;34m'
 CYAN='\033[0;36m'

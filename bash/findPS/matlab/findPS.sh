@@ -2,7 +2,7 @@
 
 CDMAIN=$PWD
 #path to matlab file
-MPATH=/home/spfeife/Bash/findPS/matlab
+MPATH=
 
 #filename
 NAM="energy.txt"

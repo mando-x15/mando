@@ -11,7 +11,7 @@
 #
 #
 ##
-# Written By: Balaji Pokuri & Spencer Pfeifer
+# Written By: 
 # Date: 10/25/17
 #
 ##############################################################
@@ -25,7 +25,7 @@ export LC_ALL=C
 ## --------------------- USER INPUT ----------------------  ##
 
 # SET PATHS
-SRC=/media/spfeife/ext4/LOCAL/graspi
+SRC=/media/
 RESULTS_DIR=$PWD/RESULTS
 CONFIG=$PWD/config.txt
 CDHOME=$PWD
@@ -42,7 +42,7 @@ GRASPI_EXEC=$SRC/src/graspi
 ht=0.0879
 
 # set location of uniform mesh (IF POSSIBLE! Otherwise comment this out)
-UNIMESH=/media/spfeife/ext4/LOCAL/graspi/tools/mesh_uniform.plt
+UNIMESH=/media/..plt
 
 
 ### SET MESH PARAMETERS ### 

@@ -5,8 +5,8 @@ clear; close all;
 % USAGE:
 %   Simply run this script.  Will prompt user for input.
 %
-% Written By:    Spencer Pfeifer
-%                spfeife@istate.edu
+% Written By:    
+%                
 % Date:   1/4/16
 %
 %% OPTIONAL INPUT

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UTIL="/home/spfeife/Dropbox/APOLLO/phafic/tools/make_figs"
+UTIL="/home"
 
 # zip all data
 for j in ke*; do
